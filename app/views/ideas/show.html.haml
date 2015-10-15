@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @idea.user_id
+%p
+  %b Permissions:
+  = @idea.permissions_id
+
+= link_to 'Edit', edit_idea_path(@idea)
+\|
+= link_to 'Back', ideas_path

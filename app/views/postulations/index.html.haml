@@ -1,0 +1,21 @@
+%h1 Listing postulations
+
+%table
+  %tr
+    %th User
+    %th Idea
+    %th
+    %th
+    %th
+
+  - @postulations.each do |postulation|
+    %tr
+      %td= postulation.user_id
+      %td= postulation.idea_id
+      %td= link_to 'Show', postulation
+      %td= link_to 'Edit', edit_postulation_path(postulation)
+      %td= link_to 'Destroy', postulation, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Postulation', new_postulation_path

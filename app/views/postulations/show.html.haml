@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @postulation.user_id
+%p
+  %b Idea:
+  = @postulation.idea_id
+
+= link_to 'Edit', edit_postulation_path(@postulation)
+\|
+= link_to 'Back', postulations_path

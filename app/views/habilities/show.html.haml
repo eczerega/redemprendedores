@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @hability.name
+
+= link_to 'Edit', edit_hability_path(@hability)
+\|
+= link_to 'Back', habilities_path

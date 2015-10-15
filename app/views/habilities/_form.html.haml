@@ -1,0 +1,13 @@
+= form_for @hability do |f|
+  - if @hability.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@hability.errors.count, "error")} prohibited this hability from being saved:"
+      %ul
+        - @hability.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.number_field :name
+  .actions
+    = f.submit 'Save'

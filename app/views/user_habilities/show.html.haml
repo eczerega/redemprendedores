@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @user_hability.user_id
+%p
+  %b Hability:
+  = @user_hability.hability_id
+
+= link_to 'Edit', edit_user_hability_path(@user_hability)
+\|
+= link_to 'Back', user_habilities_path

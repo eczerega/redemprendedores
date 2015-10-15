@@ -1,0 +1,23 @@
+%h1 Listing permissions
+
+%table
+  %tr
+    %th Role
+    %th User
+    %th Idea
+    %th
+    %th
+    %th
+
+  - @permissions.each do |permission|
+    %tr
+      %td= permission.role_id
+      %td= permission.user_id
+      %td= permission.idea_id
+      %td= link_to 'Show', permission
+      %td= link_to 'Edit', edit_permission_path(permission)
+      %td= link_to 'Destroy', permission, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Permission', new_permission_path

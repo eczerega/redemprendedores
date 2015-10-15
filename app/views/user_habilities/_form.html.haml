@@ -1,0 +1,16 @@
+= form_for @user_hability do |f|
+  - if @user_hability.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@user_hability.errors.count, "error")} prohibited this user_hability from being saved:"
+      %ul
+        - @user_hability.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :hability_id
+    = f.number_field :hability_id
+  .actions
+    = f.submit 'Save'

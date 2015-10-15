@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Idea:
+  = @mature.idea_id
+
+= link_to 'Edit', edit_mature_path(@mature)
+\|
+= link_to 'Back', matures_path

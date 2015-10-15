@@ -1,0 +1,19 @@
+%h1 Listing matures
+
+%table
+  %tr
+    %th Idea
+    %th
+    %th
+    %th
+
+  - @matures.each do |mature|
+    %tr
+      %td= mature.idea_id
+      %td= link_to 'Show', mature
+      %td= link_to 'Edit', edit_mature_path(mature)
+      %td= link_to 'Destroy', mature, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Mature', new_mature_path

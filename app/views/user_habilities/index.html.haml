@@ -1,0 +1,21 @@
+%h1 Listing user_habilities
+
+%table
+  %tr
+    %th User
+    %th Hability
+    %th
+    %th
+    %th
+
+  - @user_habilities.each do |user_hability|
+    %tr
+      %td= user_hability.user_id
+      %td= user_hability.hability_id
+      %td= link_to 'Show', user_hability
+      %td= link_to 'Edit', edit_user_hability_path(user_hability)
+      %td= link_to 'Destroy', user_hability, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User hability', new_user_hability_path
