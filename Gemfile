@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
 
+#Upate
 #Herramientas de desarrollo
 group :development, :test do
   gem 'progress_bar' #para mostrar una progressbar en la consola en procesos largos
