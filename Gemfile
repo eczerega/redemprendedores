@@ -9,7 +9,6 @@ group :development, :test do
   gem 'quiet_assets'
   # gem 'rack-mini-profiler' #para mostrar estadísticas de velocidad y queries en las vistas
   gem 'railroady' #para generar diagramas E-R de la base de datos. Uso: rake diagram:all
-  gem 'ruby-graphviz', '~> 1.2.2'
   gem 'rails-rename', '~> 1.0.0' #para cambiarle el nombre a la app con: rails g rename NewAppName
   gem "hub", ">= 1.12.4", :require => nil #agrega funcionalidades extra de GitHub en la consola
   ## Benchmarking and code analytics
@@ -25,7 +24,7 @@ group :development, :test do
   gem 'hirb' #mejora como se muestran las respuestas de tablas de rails c. Uso: Hirb.enable
   gem 'awesome_print' #mejora la forma de imprimir datos en la consola. Uso: ap User.first
 end
- 
+
 ##Servicios Externos
 #Login G+
 gem "omniauth-google-oauth2"
@@ -34,7 +33,7 @@ gem 'omniauth-facebook'
 #Captcha
 gem "recaptcha", :require => "recaptcha/rails"
 # Correos
-gem "sendgrid", ">= 1.0.1" 
+gem "sendgrid", ">= 1.0.1"
 
 #Para el manejor de assets
 gem 'actionpack',   '>= 4.2.3'
@@ -53,7 +52,7 @@ gem "bcrypt-ruby", '~> 3.1.2', :require => "bcrypt"	#para encriptar contraseñas
 gem "haml-rails", ">= 0.5.3" #para usar vistas .haml
 gem "cancancan"
 #para declarar variables de entorno(en el application.yml). Se suben a heroku con: figaro heroku:set
-gem "figaro", ">= 0.7.0" 
+gem "figaro", ">= 0.7.0"
 gem 'friendly_id', '~> 5.0.4' #the name says it all
 gem 'eventmachine', '1.0.7', :git => "git://github.com/eventmachine/eventmachine.git"
 
@@ -85,16 +84,27 @@ gem 'cocaine', "~> 0.5.3"
 gem "paperclip"
 gem 'aws-sdk', '< 2.0'
 
+#Graficos
+gem 'chartkick', '~> 1.4.1'
+
+#Agrupar por creación
+gem 'groupdate'
+
+#Agrupar resultados
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
+
 
 ##Heroku services & configurations
 #cambio de BBDD para heroku
 group :development, :test do
-  gem 'sqlite3', ">= 1.3.10"
+  gem 'pg', "~> 0.18.2"
+  #gem 'sqlite3', ">= 1.3.10"
 end
 group :production do
   gem 'pg', "~> 0.18.2"
 end
-#gem "passenger", ">= 5.0.14", require: false
+gem "unicorn", ">= 4.8.3" #servidor con multithread en producion
 #gem 'newrelic_rpm'
 #gem 'delayed_job_active_record'
 gem 'rails_12factor', group: :production #compatibilidad con rails 4
