@@ -66,7 +66,7 @@ DefaultInit::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   #CONFIG¡¡¡ Para usar home_url() en vez de home_path() en los mails
-  # config.action_mailer.default_url_options = { :host => 'http://brainshots.cl' }
+  # config.action_mailer.default_url_options = { :host => '' }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).

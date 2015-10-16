@@ -161,10 +161,10 @@ es:
       activation: "Revisa tu correo y activa tu cuenta"
       invalid_pass: "Contraseña o correo incorrectos"
   common:
-    app_name: "Nombre App"
+    app_name: "SensualBas"
     app_desc: "Descripción App"
-    app_url: "http://brainshots.cl"
-    app_url2: "http://brainshots.cl"
+    app_url: "sensualbas.cl"
+    app_url2: "sensualbas.cl"
     toggle_navigation: "Invertir navegación"
     nav:
       register: "Regístrate"

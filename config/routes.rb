@@ -39,8 +39,9 @@ DefaultInit::Application.routes.draw do
   resources :sessions
   resources :users
 
+  get "main" => "main#index", :as => "main"
   get "home" => "home#index", :as => "home"
-  root :to => "home#index"
+  root :to => "main#index"
 
   #API
   namespace :api, defaults: {format: 'json'} do

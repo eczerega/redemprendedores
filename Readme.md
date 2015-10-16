@@ -56,12 +56,4 @@ If you make improvements to this application, please share with others.
 * Bonus points for topic branches.
 * Send the author a pull request.
 
-If you add functionality to this application, create an alternative implementation, or build an application that is similar, please contact me at [max@brainshots.cl](mailto:max@brainshots.cl) and I'll add a note to the README so that others can find your work.
-
-##Credits
-
-Developed by Max Findel & the team at [Brainshots](http://brainshots.cl)
-
-
-
 

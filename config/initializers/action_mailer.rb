@@ -8,7 +8,7 @@ class BlacklisterMailInterceptor
       #para evitar que se manden mails en dev
     	# if Rails.application.config.consider_all_requests_local
     	# 	message.subject = "[#{message.to}] #{message.subject}"
-    	# 	message.to = "hello@brainshots.cl"
+    	# 	message.to = ""
     	# end
 	end
 end

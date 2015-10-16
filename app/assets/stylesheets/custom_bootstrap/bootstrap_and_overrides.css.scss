@@ -49,3 +49,9 @@
 @media (min-width: $screen-desktop) {
   @include grid-shortcuts($prefix: 'l', $with-offsets: true);
 }
+
+.jumbotron {
+  background: transparent !important; /* This is for ie8 and below */
+  background: transparent !important;
+}
+
