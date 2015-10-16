@@ -8,6 +8,7 @@
 
       %title= content_for?(:title) ? yield(:title) : t('common.app_name')
       %meta{:content => content_for?(:description) ? yield(:description) : t('common.app_desc'), :name => "description"}
+      %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1, maximum-scale=1"}
       = metamagic
       = stylesheet_link_tag "application", :media => "all" #, "data-turbolinks-track" => true
       = javascript_include_tag "application" #, "data-turbolinks-track" => true
